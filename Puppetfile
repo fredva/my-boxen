@@ -39,3 +39,4 @@ github "xquartz",    "1.1.0"
 
 github "alfred",     "1.1.3"
 github "macvim",     "1.0.0"
+github "spotify",    "1.0.1"
