@@ -3,12 +3,17 @@ class people::fredva {
   $home = "/Users/${::boxen_user}"
   
   include "alfred"
+  include "chrome"
   include "dropbox"
-  include "macvim"
-  include "spotify"
-  include "virtualbox"
-  include "vagrant"
   include "fish"
+  include "flux"
+  include iterm2::stable
+  include "macvim"
+  include "mou"
+  include "spotify"
+  include "vagrant"
+  include "virtualbox"
+  include "wget"
 
   package {
     'vim': ; 
