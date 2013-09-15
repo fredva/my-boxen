@@ -8,6 +8,7 @@ class people::fredva {
   include "spotify"
   include "virtualbox"
   include "vagrant"
+  include "fish"
 
   package {
     'vim': ; 
@@ -38,5 +39,17 @@ class people::fredva {
   file { $vimdir: 
     target => $dotvim_repo,
     require => Repository[$dotvim_repo] 
+  }
+
+  # Set up dotfiles
+  $dotfiles_repo = "${boxen::config::srcdir}/dotfiles"
+  repository { $dotfiles_repo:
+    source => 'fredva/dotfiles'
+  }
+
+  file { "${home}/.config/fish":
+    ensure => 'link',
+    target => "${dotfiles_repo}/fish",
+    require => Repository[$dotfiles_repo]
   }
 }
