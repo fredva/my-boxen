@@ -87,4 +87,20 @@ class people::fredva {
     target  => "${dotfiles_repo}/bashrc",
     require => Repository[$dotfiles_repo]
   }
+
+  # Set up vimdeck 
+  class { 'ruby::global':
+    version => '2.0.0'
+  }
+
+  ruby::gem { 'vimdeck for 2.0.0':
+    gem     => 'vimdeck',
+    ruby    => '2.0.0',
+    version => '~> 0.1.6',
+    require => Package['imagemagick']
+  }
+
+  package {
+    'imagemagick': ;
+  }
 }
