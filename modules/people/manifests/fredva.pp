@@ -51,6 +51,8 @@ class people::fredva {
     notify => Exec["generate boxen config for fish"]
   }
 
+  # The Boxen script to source in the shell is made for POSIX shells.
+  # Make a fish-friendly equivalent to source in the fish config
   exec { "generate boxen config for fish":
     command     => "$home/.config/fish/boxen-to-fish.rb",
     provider    => 'shell',
