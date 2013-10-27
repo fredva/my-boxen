@@ -19,6 +19,18 @@ class people::fredva {
     'vim': ; 
   }
 
+  # Mac OS X defaults
+  include osx::global::expand_save_dialog
+  include osx::global::expand_print_dialog
+  include osx::global::disable_autocorrect
+  include osx::dock::autohide
+  include osx::dock::clear_dock
+  include osx::finder::show_all_on_desktop
+  include osx::no_network_dsstores
+  class { 'osx::dock::icon_size':
+    size => 60
+  }
+
   # Set up vim
   $vimrc = "${home}/.vimrc" 
   $vimdir = "${home}/.vim" 
