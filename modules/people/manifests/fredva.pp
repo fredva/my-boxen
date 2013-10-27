@@ -51,6 +51,10 @@ class people::fredva {
     notify => Exec["generate boxen config for fish"]
   }
 
+  file { "${home}/.config":
+    ensure => directory
+  }
+
   # The Boxen script to source in the shell is made for POSIX shells.
   # Make a fish-friendly equivalent to source in the fish config
   exec { "generate boxen config for fish":
@@ -63,7 +67,7 @@ class people::fredva {
   file { $fish_config: 
     ensure  => 'link',
     target  => "${dotfiles_repo}/fish",
-    require => Repository[$dotfiles_repo]
+    require => [ Repository[$dotfiles_repo], File["${home}/.config"] ]
   }
 
   file { $bashrc:
