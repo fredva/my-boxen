@@ -2,18 +2,18 @@ class people::fredva {
   
   $home = "/Users/${::boxen_user}"
   
-  include "alfred"
-  include "chrome"
-  include "dropbox"
-  include "fish"
-  include "flux"
+  include alfred
+  include chrome
+  include dropbox
+  include fish
+  include flux
   include iterm2::stable
-  include "macvim"
-  include "mou"
-  include "spotify"
-  include "vagrant"
-  include "virtualbox"
-  include "wget"
+  include macvim
+  include mou
+  include spotify
+  include vagrant
+  include virtualbox
+  include wget
 
   package {
     'vim': ; 
