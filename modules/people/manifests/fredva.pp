@@ -14,6 +14,7 @@ class people::fredva {
   include vagrant
   include virtualbox
   include wget
+  include firefox
 
   package {
     'vim': ; 
