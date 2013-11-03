@@ -26,11 +26,7 @@ class people::fredva {
   include osx::global::disable_autocorrect
   include osx::finder::show_all_on_desktop
   include osx::no_network_dsstores
-  include osx::dock::autohide
-  include osx::dock::clear_dock
-  class { 'osx::dock::icon_size':
-    size => 60
-  }
+  include osx::dock::disable
 
   # Set up vim
   $vimrc = "${home}/.vimrc" 
