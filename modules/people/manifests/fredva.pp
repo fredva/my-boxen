@@ -89,6 +89,13 @@ class people::fredva {
     require => Repository[$dotfiles_repo]
   }
 
+  # Configure Git
+  file { "${home}/.gitconfig":
+    ensure => 'link',
+    target => "${dotfiles_repo}/gitconfig",
+    require => Repository[$dotfiles_repo]
+  }
+
   # Set up vimdeck 
   class { 'ruby::global':
     version => '2.0.0'
@@ -104,4 +111,5 @@ class people::fredva {
   package {
     'imagemagick': ;
   }
-}
+
+  }
