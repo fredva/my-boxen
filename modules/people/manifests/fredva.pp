@@ -37,13 +37,6 @@ class people::fredva {
   #  require => Repository[$dotvim_repo] 
   #}
 
-  # Mac OS X defaults
-  include osx::global::expand_save_dialog
-  include osx::global::expand_print_dialog
-  include osx::global::disable_autocorrect
-  include osx::finder::show_all_on_desktop
-  include osx::no_network_dsstores
-  
   # 2
   #include osx::dock::autohide
   #include osx::dock::clear_dock
@@ -54,6 +47,13 @@ class people::fredva {
   # 3
   #include osx::dock::disable
 
+  # Mac OS X defaults
+  include osx::global::expand_save_dialog
+  include osx::global::expand_print_dialog
+  include osx::global::disable_autocorrect
+  include osx::finder::show_all_on_desktop
+  include osx::no_network_dsstores
+ 
   # Set up dotfiles
   $dotfiles_repo = "${boxen::config::srcdir}/dotfiles"
   $fish_config   = "${home}/.config/fish"
