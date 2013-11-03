@@ -24,10 +24,10 @@ class people::fredva {
   include osx::global::expand_save_dialog
   include osx::global::expand_print_dialog
   include osx::global::disable_autocorrect
-  include osx::dock::autohide
-  include osx::dock::clear_dock
   include osx::finder::show_all_on_desktop
   include osx::no_network_dsstores
+  include osx::dock::autohide
+  include osx::dock::clear_dock
   class { 'osx::dock::icon_size':
     size => 60
   }
@@ -39,7 +39,6 @@ class people::fredva {
 
   repository { $dotvim_repo:
     source  => 'fredva/dotvim',
-    extra   => "--recurse-submodules"
   }
 
   file { $vimrc:
@@ -111,5 +110,4 @@ class people::fredva {
   package {
     'imagemagick': ;
   }
-
-  }
+}
