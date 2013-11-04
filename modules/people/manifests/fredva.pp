@@ -5,6 +5,7 @@ class people::fredva {
   include alfred
   include chrome
   include dropbox
+  include firefox
   include fish
   include flux
   include iterm2::stable
@@ -13,8 +14,8 @@ class people::fredva {
   include spotify
   include vagrant
   include virtualbox
+  include vlc
   include wget
-  include firefox
 
   package {
     'vim': ; 
