@@ -55,3 +55,19 @@ github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "alfred",     "1.1.6"
+github "chrome",     "1.1.1"
+github "dropbox",    "1.1.1"
+github "firefox",    "1.1.4"
+github "fish",       "1.0.0"
+github "flux",       "1.0.0"
+github "iterm2",     "1.0.3"
+github "macvim",     "1.0.0"
+github "mou",        "1.1.3"
+github "osx",        "1.6.0"
+github "spotify",    "1.0.1"
+github "vagrant",    "3.0.0"
+github "virtualbox", "1.0.7"
+github "vlc",        "1.0.5"
+github "wget",       "1.0.0"
