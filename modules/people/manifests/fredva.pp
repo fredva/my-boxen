@@ -8,6 +8,7 @@ class people::fredva {
   include firefox
   include fish
   include flux
+  include imagemagick
   include iterm2::stable
   include macvim
   include mou
