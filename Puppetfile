@@ -58,7 +58,7 @@ github "xquartz",    "1.1.0"
 
 github "alfred",     "1.1.6"
 github "chrome",     "1.1.1"
-github "dropbox",    "1.1.1"
+github "dropbox",    "1.2.0"
 github "firefox",    "1.1.4"
 github "fish",       "1.0.0"
 github "flux",       "1.0.0"
