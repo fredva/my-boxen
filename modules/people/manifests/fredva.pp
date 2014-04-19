@@ -20,6 +20,7 @@ class people::fredva {
 
   package {
     'vim': ; 
+    'p7zip': ;
   }
 
   # Mac OS X defaults
