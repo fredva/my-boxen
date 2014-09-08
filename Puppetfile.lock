@@ -141,7 +141,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
-    vagrant (3.1.1)
+    vagrant (3.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-virtualbox
@@ -210,7 +210,7 @@ DEPENDENCIES
   spotify (= 1.0.1)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
-  vagrant (= 3.1.1)
+  vagrant (= 3.2.0)
   virtualbox (= 1.0.13)
   vlc (= 1.1.0)
   wget (= 1.0.1)
