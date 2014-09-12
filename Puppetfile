@@ -29,11 +29,11 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.4.2"
+github "boxen", "3.6.2"
 
 # Support for default hiera data in modules
 
-github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
+github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -45,7 +45,7 @@ github "git",         "2.5.0"
 github "go",          "1.1.0"
 github "homebrew",    "1.9.4"
 github "hub",         "1.3.0"
-github "inifile",     "1.0.3", :repo => "puppetlabs/puppetlabs-inifile"
+github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",       "1.4.3"
 github "nodejs",      "3.8.1"
 github "openssl",     "1.0.0"
@@ -60,18 +60,15 @@ github "xquartz",     "1.1.1"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "alfred",     "1.2.0"
-github "chrome",     "1.1.2"
-github "dropbox",    "1.2.0"
-github "firefox",    "1.2.1"
-github "fish",       "1.0.0"
+github "alfred",     "1.3.1"
+github "chrome",     "1.2.0"
+github "dropbox",    "1.4.0"
+github "firefox",    "1.2.2"
 github "flux",       "1.0.1"
-github "imagemagick","1.3.0"
-github "iterm2",     "1.1.2"
+github "iterm2",     "1.2.0"
 github "macvim",     "1.0.0"
-github "mou",        "1.1.3"
-github "osx",        "2.7.0"
-github "spotify",    "1.0.1"
+github "osx",        "2.7.1"
+github "spotify",    "1.0.2"
 github "vagrant",    "3.2.0"
 github "virtualbox", "1.0.13"
 github "vlc",        "1.1.0"

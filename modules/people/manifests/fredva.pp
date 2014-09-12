@@ -6,12 +6,9 @@ class people::fredva {
   include chrome
   include dropbox
   include firefox
-  include fish
   include flux
-  include imagemagick
   include iterm2::stable
   include macvim
-  include mou
   include spotify
   include vagrant
   include virtualbox
@@ -20,7 +17,6 @@ class people::fredva {
 
   package {
     'vim': ; 
-    'p7zip': ;
   }
 
   # Mac OS X defaults
@@ -59,31 +55,10 @@ class people::fredva {
 
   # Set up dotfiles
   $dotfiles_repo = "${boxen::config::srcdir}/dotfiles"
-  $fish_config   = "${home}/.config/fish"
   $bashrc        = "${home}/.bashrc"
 
   repository { $dotfiles_repo:
     source => 'fredva/dotfiles',
-    notify => Exec["generate boxen config for fish"]
-  }
-
-  file { "${home}/.config":
-    ensure => directory
-  }
-
-  # The Boxen script to source in the shell is made for POSIX shells.
-  # Make a fish-friendly equivalent to source in the fish config
-  exec { "generate boxen config for fish":
-    command     => "$home/.config/fish/boxen-to-fish.rb",
-    provider    => 'shell',
-    refreshonly => true,
-    user        => $::boxen_user
-  }
-
-  file { $fish_config: 
-    ensure  => 'link',
-    target  => "${dotfiles_repo}/fish",
-    require => [ Repository[$dotfiles_repo], File["${home}/.config"] ]
   }
 
   file { $bashrc:
