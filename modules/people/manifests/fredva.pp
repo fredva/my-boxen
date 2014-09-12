@@ -32,10 +32,16 @@ class people::fredva {
   }
   include osx::dock::disable
 
+  # Set up checkout directory for repos
+  $srcdir = $home/local/src
+  file { $srcdir:
+    ensure => directory
+  }
+
   # Set up vim
   $vimrc = "${home}/.vimrc" 
   $vimdir = "${home}/.vim" 
-  $dotvim_repo = "${boxen::config::srcdir}/dotvim"
+  $dotvim_repo = "${srcdir}/dotvim"
 
   repository { $dotvim_repo:
     source  => 'fredva/dotvim',
@@ -54,7 +60,7 @@ class people::fredva {
   }
 
   # Set up dotfiles
-  $dotfiles_repo = "${boxen::config::srcdir}/dotfiles"
+  $dotfiles_repo = "${srcdir}/dotfiles"
   $bashrc        = "${home}/.bashrc"
 
   repository { $dotfiles_repo:
