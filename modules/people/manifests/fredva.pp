@@ -15,10 +15,6 @@ class people::fredva {
   include vlc
   include wget
 
-  package {
-    'vim': ; 
-  }
-
   # Mac OS X defaults
   include osx::global::expand_save_dialog
   include osx::global::expand_print_dialog
@@ -33,9 +29,15 @@ class people::fredva {
   include osx::dock::disable
 
   # Set up checkout directory for repos
-  $srcdir = $home/local/src
-  file { $srcdir:
+  $localdir = "${home}/local"
+  file { $localdir:
     ensure => directory
+  }
+
+  $srcdir = "${localdir}/src"
+  file { $srcdir:
+    ensure => directory,
+    require => File[$localdir]
   }
 
   # Set up vim
