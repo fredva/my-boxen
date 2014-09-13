@@ -63,15 +63,15 @@ class people::fredva {
 
   # Set up dotfiles
   $dotfiles_repo = "${srcdir}/dotfiles"
-  $bashrc        = "${home}/.bashrc"
+  $profile        = "${home}/.profile"
 
   repository { $dotfiles_repo:
     source => 'fredva/dotfiles',
   }
 
-  file { $bashrc:
+  file { $profile:
     ensure  => 'link',
-    target  => "${dotfiles_repo}/bashrc",
+    target  => "${dotfiles_repo}/profile",
     require => Repository[$dotfiles_repo]
   }
 
