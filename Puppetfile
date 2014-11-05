@@ -61,11 +61,13 @@ github "xquartz",     "1.1.1"
 # https://github.com/boxen.
 
 github "alfred",     "1.3.1"
+github "calibre",    "3.1.0"
 github "chrome",     "1.2.0"
 github "dropbox",    "1.4.0"
 github "firefox",    "1.2.2"
 github "flux",       "1.0.1"
 github "iterm2",     "1.2.0"
+github "java",       "1.7.0"
 github "macvim",     "1.0.0"
 github "osx",        "2.7.1"
 github "spotify",    "1.0.2"
