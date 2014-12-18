@@ -32,6 +32,8 @@ class people::fredva {
   }
   include osx::dock::disable
 
+  class { 'nodejs::global': version => 'v0.10.34' }
+
   # Set up checkout directory for repos
   $localdir = "${home}/local"
   file { $localdir:
