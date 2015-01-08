@@ -1,7 +1,7 @@
 class people::fredva {
-  
+
   $home = "/Users/${::boxen_user}"
-  
+
   include alfred
   include calibre
   include chrome
@@ -16,6 +16,7 @@ class people::fredva {
   include virtualbox
   include vlc
   include wget
+  include zsh
 
   # Mac OS X defaults
   include osx::global::expand_save_dialog
@@ -62,9 +63,9 @@ class people::fredva {
   }
 
   file { $vimdir: 
-    ensure  => link,
-    target  => $dotvim_repo,
-    require => Repository[$dotvim_repo] 
+  ensure  => link,
+  target  => $dotvim_repo,
+  require => Repository[$dotvim_repo] 
   }
 
   # Set up dotfiles
@@ -78,6 +79,20 @@ class people::fredva {
   file { $profile:
     ensure  => 'link',
     target  => "${dotfiles_repo}/profile",
+    require => Repository[$dotfiles_repo]
+  }
+
+  # Oh my Zsh
+  $ohmyzsh = "${home}/.oh-my-zsh"
+  $zshrc = "${home}/.zshrc"
+  
+  repository { $ohmyzsh:
+    source => 'robbyrussell/oh-my-zsh'
+  }
+
+  file { $zshrc:
+    ensure => 'link',
+    target => "${dotfiles_repo}/zshrc.zsh",
     require => Repository[$dotfiles_repo]
   }
 

@@ -75,4 +75,5 @@ github "vagrant",    "3.2.0"
 github "virtualbox", "1.0.13"
 github "vlc",        "1.1.0"
 github "wget",       "1.0.1"
+github "zsh",        "1.0.0"
 

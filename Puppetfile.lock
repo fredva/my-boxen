@@ -159,6 +159,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.1.1)
@@ -209,4 +214,5 @@ DEPENDENCIES
   vlc (= 1.1.0)
   wget (= 1.0.1)
   xquartz (= 1.2.1)
+  zsh (= 1.0.0)
 
