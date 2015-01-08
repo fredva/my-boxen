@@ -103,4 +103,9 @@ class people::fredva {
     target => "${dotfiles_repo}/gitconfig",
     require => Repository[$dotfiles_repo]
   }
+
+  # Neo4j
+  package { 'neo4j':
+    ensure => present 
+  }
 }
