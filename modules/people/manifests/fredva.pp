@@ -11,6 +11,7 @@ class people::fredva {
   include iterm2::stable
   include java
   include macvim
+  include python
   include spotify
   include vagrant
   include virtualbox
